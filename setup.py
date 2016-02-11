@@ -15,10 +15,10 @@ version = open("version.txt").read().rstrip()
 # parameters that define our package.
 setup(
 
-    name='bob.db.put_vein',
+    name='bob.db.putvein',
     version=version,
     description='PUT Vein Database Access API for Bob',
-    url='http://pypi.python.org/pypi/xbob.db.putvein',
+    url='http://gitlab.idiap.ch/biometric/bob.db.putvein',
     license='GPLv3',
     author='Philip Abbet',
     author_email='philip.abbet@idiap.ch',
