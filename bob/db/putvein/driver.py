@@ -1,20 +1,5 @@
 #!/usr/bin/env python
 # vim: set fileencoding=utf-8 :
-# Philip Abbet <philip.abbet@idiap.ch>
-#
-# Copyright (C) 2016 Idiap Research Institute, Martigny, Switzerland
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, version 3 of the License.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 """Bob Database Driver entry-point for the PUT Vein Database.
 """
@@ -123,7 +108,7 @@ class Interface(BaseInterface):
         dump_parser.add_argument('-k', '--kinds', dest="kinds", default=None, help="if given, this value will limit the output files to those belonging to a particular kind. (defaults to '%(default)s')", choices=db.kinds)
         dump_parser.add_argument('--self-test', dest="selftest", default=False, action='store_true', help=SUPPRESS)
         dump_parser.set_defaults(func=dumplist) #action
-        
+
         # add the checkfiles command
         check_message = "Check if the files exist, based on your criteria"
         check_parser = subparsers.add_parser('checkfiles', help=check_message)

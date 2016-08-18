@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # vim: set fileencoding=utf-8 :
-# Philip Abbet <philip.abbet@idiap.ch>
 
 from setuptools import setup, find_packages, dist
 dist.Distribution(dict(setup_requires=['bob.extension']))
@@ -18,8 +17,8 @@ setup(
     name='bob.db.putvein',
     version=version,
     description='PUT Vein Database Access API for Bob',
-    url='http://gitlab.idiap.ch/biometric/bob.db.putvein',
-    license='GPLv3',
+    url='http://gitlab.idiap.ch/bob/bob.db.putvein',
+    license='BSD',
     author='Philip Abbet',
     author_email='philip.abbet@idiap.ch',
     long_description=open('README.rst').read(),
@@ -28,7 +27,6 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
-
 
     install_requires = install_requires,
 
@@ -44,7 +42,7 @@ setup(
       'Framework :: Bob',
       'Development Status :: 4 - Beta',
       'Intended Audience :: Science/Research',
-      'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
+      'License :: OSI Approved :: BSD License',
       'Natural Language :: English',
       'Programming Language :: Python',
       'Programming Language :: Python :: 3',
