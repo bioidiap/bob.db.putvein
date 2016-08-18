@@ -8,7 +8,6 @@ PUT Vein database in the most obvious ways.
 import os
 import six
 from .models import File
-from builtins import range
 
 
 class Database(object):
