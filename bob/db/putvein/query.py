@@ -156,7 +156,7 @@ class Database(object):
 
         for id in filtered_ids:
             for serie in series:
-                for n in xrange(1, 5):
+                for n in six.xrange(1, 5):
                     result.append(
                         File(
                             os.path.join(
