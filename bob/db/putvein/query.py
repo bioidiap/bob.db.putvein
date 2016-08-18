@@ -8,6 +8,7 @@ PUT Vein database in the most obvious ways.
 import os
 import six
 from .models import File
+from builtins import range
 
 
 class Database(object):
@@ -156,7 +157,7 @@ class Database(object):
 
         for id in filtered_ids:
             for serie in series:
-                for n in six.xrange(1, 5):
+                for n in range(1, 5):
                     result.append(
                         File(
                             os.path.join(
