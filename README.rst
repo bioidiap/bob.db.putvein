@@ -5,8 +5,8 @@
    :target: http://pythonhosted.org/bob.db.putvein/index.html
 .. image:: http://img.shields.io/badge/docs-latest-orange.png
    :target: https://www.idiap.ch/software/bob/docs/latest/bob/bob.db.putvein/master/index.html
-.. image:: https://gitlab.idiap.ch/bob/bob.db.putvein/badges/v1.1.1/build.svg
-   :target: https://gitlab.idiap.ch/bob/bob.db.putvein/commits/v1.1.1
+.. image:: https://gitlab.idiap.ch/bob/bob.db.putvein/badges/master/build.svg
+   :target: https://gitlab.idiap.ch/bob/bob.db.putvein/commits/master
 .. image:: https://img.shields.io/badge/gitlab-project-0000c0.svg
    :target: https://gitlab.idiap.ch/bob/bob.db.putvein
 .. image:: http://img.shields.io/pypi/v/bob.db.putvein.png
