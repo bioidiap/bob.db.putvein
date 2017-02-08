@@ -448,7 +448,7 @@ def test_query_R_BEAT_4_protocol():
     nose.tools.eq_(len(objs), 16)
 
     objs = db.model_ids(protocol="R_BEAT_4", groups="dev", kinds="palm")
-    nose.tools.eq_(objs, ["1", "2"])
+    nose.tools.eq_(objs.sort(), ["1", "2"].sort())
 
     # eval:
     objs = db.objects(protocol="R_BEAT_4", purposes="enroll", groups="eval", kinds="wrist")
@@ -470,7 +470,7 @@ def test_query_R_BEAT_4_protocol():
     nose.tools.eq_(len(objs), 16)
 
     objs = db.model_ids(protocol="R_BEAT_4", groups="eval", kinds="palm")
-    nose.tools.eq_(objs, ["26", "27"])
+    nose.tools.eq_(objs.sort(), ["26", "27"].sort())
 
     # test the same on PALMS:
     # dev:
@@ -493,7 +493,7 @@ def test_query_R_BEAT_4_protocol():
     nose.tools.eq_(len(objs), 16)
 
     objs = db.model_ids(protocol="R_BEAT_4", groups="dev", kinds="palm")
-    nose.tools.eq_(objs, ["1", "2"])
+    nose.tools.eq_(objs.sort(), ["1", "2"].sort())
 
     # eval:
     objs = db.objects(protocol="R_BEAT_4", purposes="enroll", groups="eval", kinds="palm")
@@ -515,7 +515,7 @@ def test_query_R_BEAT_4_protocol():
     nose.tools.eq_(len(objs), 16)
 
     objs = db.model_ids(protocol="R_BEAT_4", groups="eval", kinds="palm")
-    nose.tools.eq_(objs, ["26", "27"])
+    nose.tools.eq_(objs.sort(), ["26", "27"].sort())
 
 
 def test_dumplist():
