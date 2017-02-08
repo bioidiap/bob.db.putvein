@@ -76,42 +76,47 @@ class Database(object):
 
 
     def objects(self, protocol=None, purposes=None, model_ids=None, groups=None, kinds=None):
-        """Returns a set of Files for the specific query by the user.
+        """
+Returns a set of Files for the specific query by the user.
 
         Keyword Parameters:
 
         protocol
           One of the PUT protocols. As on 08.02.2017 protocols are:
-              ``L_4``,
-              ``R_4``,
-              ``LR_4``,
-              ``RL_4``,
-              ``R_BEAT_4``,
-              ``L_1``,
-              ``R_1``,
-              ``LR_1``
-              ``RL_1``,
-              ``R_BEAT_1``,
+
+              - ``L_4``,
+              - ``R_4``,
+              - ``LR_4``,
+              - ``RL_4``,
+              - ``R_BEAT_4``,
+              - ``L_1``,
+              - ``R_1``,
+              - ``LR_1``
+              - ``RL_1``,
+              - ``R_BEAT_1``.
+
           Protocols still contains the original protocol ('L', 'R', 'LR', 'RL')
-          data, the difference is, whether each enroll model is constructed 
-          using all hand's images (4), or each enroll image is used as a model. 
+          data, the difference is, whether each enroll model is constructed
+          using all hand's images (4), or each enroll image is used as a model.
           E.g.:
 
           The ``R_1`` protocol, if one kind (palm / wrist) is used, each group
           (dev / eval) consists of 25*4 enroll images (each image treated as a
           separate model) and 25*8 probe images, resulting in:
-              -- 25*4*8 = 800 genuine comparisons;
-              -- (25*4)*(24*8) = 19200 zero-effort impostor comparisons;
-              -- 25*4*25*8 = 20'000 total comparisons.
+
+              - 25*4*8 = 800 genuine comparisons,
+              - (25*4)*(24*8) = 19200 zero-effort impostor comparisons,
+              - 25*4*25*8 = 20'000 total comparisons.
 
           The ``R_4`` protocol consists of the same data as ``R_1`` but now 4
           images makes enroll model resulting in 25 enroll models per dev /
           eval group. Meaning there are:
-              -- 25*8 = 200 genuine SCORES;
-              -- 25*(24*8) = 4800 zero-effort impostor SCORES;
-              -- 25*25*8 = 5'000 total SCORES.
 
-          Protocols ``R_BEAT_1`` and ``R_BEAT_4``are new **quick test**
+              - 25*8 = 200 genuine SCORES;
+              - 25*(24*8) = 4800 zero-effort impostor SCORES;
+              - 25*25*8 = 5'000 total SCORES.
+
+          Protocols ``R_BEAT_1`` and ``R_BEAT_4`` are new **quick test**
           protocols for BOB and BEAT platforms.
 
           The ``R_BEAT_1`` protocol consists only of 2 persons in dev / eval
@@ -119,16 +124,18 @@ class Database(object):
           testing. If we use only one kind of data (palm / wrist), than for
           each group (dev / eval) we have 4*2 enroll images (each image makes
           a separate model) and 2*8 probe images resulting in:
-              -- 2*4*8 = 64 genuine compressions;
-              -- 2*4*8 = 64 zero-effort impostor compressions;
-              -- 4*2*2*8 = 128 total comparisons.
+
+              - 2*4*8 = 64 genuine compressions;
+              - 2*4*8 = 64 zero-effort impostor compressions;
+              - 4*2*2*8 = 128 total comparisons.
 
           The ``R_BEAT_4`` consists of the same data as ``R_BEAT_1`` but now 4
           images makes enroll model resulting in 2 enroll models per dev / eval
           group. Meaning there are:
-              -- 2*8 = 16 genuine SCORES;
-              -- 2*8 = 16 zero-effort impostor SCORES;
-              -- 2*2*8 = 32 total SCORES.
+
+              - 2*8 = 16 genuine SCORES;
+              - 2*8 = 16 zero-effort impostor SCORES;
+              - 2*2*8 = 32 total SCORES.
 
           **You can find more information in packages documentation.**
 
@@ -160,7 +167,7 @@ class Database(object):
           them.  If 'None' is given (this is the default), it is considered the
           same as a tuple with all possible values.
 
-        Returns: A list of :py:class:`.File` objects.
+        Returns: A list of ``File`` objects.
         """
 # ################## WORKAROUNDS TO CONSTRUCT MODELS FROM 1 OR 4 IMAGES########
         # this part of the code is a workaround to make the ``putvein``
