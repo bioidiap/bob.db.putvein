@@ -314,3 +314,48 @@ Returns a set of Files for the specific query by the user.
                     )
 
         return result
+
+# =============================================================================
+# functions for BEAT platform.
+# =============================================================================
+    def file_model_id(self, file, protocol):
+        """
+        ``file_model_id`` - is a function made for the ``BEAT`` platform.
+        Function outputs the ``model_id`` according to the protocol used.
+
+         Keyword Parameters:
+
+        file
+          The ``bob.db.putvein`` file object
+
+        protocol
+          The ``bob.db.putvein`` protocol used - one of the protocols:
+
+              - 'L_4',
+              - 'R_4',
+              - 'LR_4',
+              - 'RL_4',
+              - 'R_BEAT_4',
+              - 'L_1',
+              - 'R_1',
+              - 'LR_1',
+              - 'RL_1',
+              - 'R_BEAT_1'.
+
+        Returns: A model_id -- a string that represents the file ``model_id``
+        according to the protocol used.
+        """
+
+        # Check the protocol:
+        if protocol not in self.protocols:
+            raise RuntimeError('Invalid protocol "{}". Valid values are {}'.\
+                               format(protocol, self.protocols))
+
+        if protocol.endswith("4"):
+            model_id = str(file.client_id)
+
+        else:  # because we check protocol names, only option that remains is
+            #    protocol.endswith("1"):
+            model_id = "{}_{}".format(file.client_id, file.nr)
+
+        return model_id
