@@ -1,6 +1,5 @@
 setuptools
 six
-re
 nose.tools
 bob.extension
 bob.db.base
