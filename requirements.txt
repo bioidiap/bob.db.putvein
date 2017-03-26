@@ -1,7 +1,5 @@
 setuptools
 six
-os
-sys
 re
 nose.tools
 bob.extension
