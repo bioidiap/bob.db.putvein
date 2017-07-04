@@ -2,9 +2,9 @@
 .. Thu 18 Aug 18:07:55 CEST 2016
 
 .. image:: http://img.shields.io/badge/docs-stable-yellow.svg
-   :target: http://pythonhosted.org/bob.db.putvein/index.html
+   :target: https://www.idiap.ch/software/bob/docs/bob/bob.db.putvein/stable/index.html
 .. image:: http://img.shields.io/badge/docs-latest-orange.svg
-   :target: https://www.idiap.ch/software/bob/docs/latest/bob/bob.db.putvein/master/index.html
+   :target: https://www.idiap.ch/software/bob/docs/bob/bob.db.putvein/master/index.html
 .. image:: https://gitlab.idiap.ch/bob/bob.db.putvein/badges/master/build.svg
    :target: https://gitlab.idiap.ch/bob/bob.db.putvein/commits/master
 .. image:: https://gitlab.idiap.ch/bob/bob.db.putvein/badges/master/coverage.svg
