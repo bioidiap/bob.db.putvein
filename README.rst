@@ -13,8 +13,6 @@
    :target: https://gitlab.idiap.ch/bob/bob.db.putvein
 .. image:: http://img.shields.io/pypi/v/bob.db.putvein.svg
    :target: https://pypi.python.org/pypi/bob.db.putvein
-.. image:: http://img.shields.io/pypi/dm/bob.db.putvein.svg
-   :target: https://pypi.python.org/pypi/bob.db.putvein
 
 
 =====================================
